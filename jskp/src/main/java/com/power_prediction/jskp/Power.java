@@ -1,5 +1,5 @@
 package com.power_prediction.jskp;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,23 +11,23 @@ public class Power {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(columnDefinition = "Float")
+//    @Column(columnDefinition = "Float")
     private Float humidity;
 
-    @Column(columnDefinition = "Integer")
+//    @Column(columnDefinition = "Integer")
     private Integer year;
-    @Column(columnDefinition = "Integer")
+//    @Column(columnDefinition = "Integer")
     private Integer month;
-    @Column(columnDefinition = "Integer")
+//    @Column(columnDefinition = "Integer")
     private Integer day;
-    @Column(columnDefinition = "Integer")
+//    @Column(columnDefinition = "Integer")
     private Integer hour;
-    @Column(columnDefinition = "Float")
+//    @Column(columnDefinition = "Float")
     private Float surface_sum;
-    @Column(columnDefinition = "TEXT")
+//    @Column(columnDefinition = "TEXT")
     private String building_type;
-    @Column(columnDefinition = "Float")
-    private Double power_pred;
+//    @Column(columnDefinition = "Float")
+    private Float power_pred;
 
 }
 
