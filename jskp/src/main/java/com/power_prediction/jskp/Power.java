@@ -1,5 +1,5 @@
 package com.power_prediction.jskp;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
