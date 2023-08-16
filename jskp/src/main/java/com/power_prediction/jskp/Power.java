@@ -11,23 +11,25 @@ public class Power {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-//    @Column(columnDefinition = "Float")
+    @Column(name="humidity(%)",columnDefinition = "Float")
     private Float humidity;
 
-//    @Column(columnDefinition = "Integer")
+    @Column(columnDefinition = "Integer")
     private Integer year;
-//    @Column(columnDefinition = "Integer")
+    @Column(columnDefinition = "Integer")
     private Integer month;
-//    @Column(columnDefinition = "Integer")
+    @Column(columnDefinition = "Integer")
     private Integer day;
-//    @Column(columnDefinition = "Integer")
+    @Column(columnDefinition = "Integer")
     private Integer hour;
-//    @Column(columnDefinition = "Float")
+    @Column(name ="surface_sum(m2)",columnDefinition = "Float")
     private Float surface_sum;
-//    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "TEXT")
     private String building_type;
-//    @Column(columnDefinition = "Float")
-    private Float power_pred;
+    @Column(name ="power_pred(kWh)",columnDefinition = "Float")
+    private Double power_pred;
+    
+    private LocalDateTime date;
 
 }
 

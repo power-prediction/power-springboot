@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import java.util.Optional;
+
 
 
 @RestController
@@ -16,10 +16,13 @@ public class Power_Controller {
     @Autowired
     private Power_Repository power_repository;
     
-    @PostMapping("/send_db")
-    public Power createdb(@RequestBody Power powerinfo) {
-        System.out.println("왔어!");
-//        Power power = convertToPower(powerinfo)
+    @PostMapping("/send_log")
+    public Power send_info(@RequestBody Power powerinfo) {
+        return power_repository.save(powerinfo);
+    }
+ 
+    @PostMapping("/send_feedback")
+    public Feedback send_feedback(@RequestBody Feedback powerinfo) {
         return power_repository.save(powerinfo);
     }
 }
